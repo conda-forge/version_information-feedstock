@@ -33,7 +33,7 @@ test:
 about:
   home: https://github.com/jrjohansson/version_information
   dev_url: https://github.com/jrjohansson/version_information
-  license:  CC-BY-4.0
+  license:  CC-BY-3.0
   summary: Version information for Jupyter notebooks
 
 extra:
