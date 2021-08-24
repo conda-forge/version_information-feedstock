@@ -1,6 +1,6 @@
 {% set name = "version_information" %}
-{% set version = "1.0.3" %}
-{% set md5 = "1fc32b7f0be67fbba2ecdfade40ea116" %}
+{% set version = "1.0.4" %}
+{% set md5 = "bc125cc81cf315c658b957ae325039aa" %}
 
 package:
   name: {{ name|lower }}
@@ -13,17 +13,17 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
 
   run:
-    - python
+    - python >=3.6
     - ipython
 
 test:
@@ -33,8 +33,8 @@ test:
 about:
   home: https://github.com/jrjohansson/version_information
   dev_url: https://github.com/jrjohansson/version_information
-  license: BSD
-  summary: 'Version information for Jupyter notebooks'
+  license:  CC-BY-3.0
+  summary: Version information for Jupyter notebooks
 
 extra:
   recipe-maintainers:
